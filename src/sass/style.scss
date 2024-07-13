@@ -9,9 +9,8 @@ body {
 }
 
 .nav {
-    position: fixed;
 	width: 100%;
-	height: 200px;
+	height: 20vh;
 	background-color: $main-color;
 
 	&__mobile {
@@ -129,7 +128,7 @@ body {
 
 .header {
 	position: relative;
-	height: 100svh;
+    height: 80vh;
 }
 
 @import 'media';

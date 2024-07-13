@@ -31,3 +31,23 @@
     justify-content: center;
     align-items: center;
 }
+
+.scroll {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 60px;
+    border: 1px solid $black-color;
+    border-radius: 20px;
+
+    .dot {
+        margin-top: 0.5em;
+        width: 15px;
+        height: 15px;
+        background-color: $main-color;
+        border-radius: 50%;
+    }
+}
+
