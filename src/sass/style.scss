@@ -1,0 +1,135 @@
+@use 'utilities' as *;
+
+body {
+	min-height: 100svh;
+	background-color: $white-color;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+	color: $black-color;
+}
+
+.nav {
+    position: fixed;
+	width: 100%;
+	height: 200px;
+	background-color: $main-color;
+
+	&__mobile {
+        gap: 1em;
+		height: 100%;
+		width: 100%;
+
+		&-items {
+			position: fixed;
+			left: 0;
+			top: 0;
+			flex-direction: column;
+			gap: 2em;
+			width: 100%;
+			height: 100%;
+			font-size: clamp(2.4rem, 5vw, 3.6rem);
+			background-color: $main-color;
+			transform: translateX(-100%);
+			transition: transform 0.4s;
+			z-index: 999;
+		}
+
+        .active-mobile {
+            transform: translateX(0);
+        }
+
+		&-burger {
+            display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 10px;
+			padding: 0.5em 1em;
+			width: 60px;
+			height: 60px;
+			z-index: 999;
+
+			&:hover {
+				.bars::after,
+				.bars::before {
+					width: 100%;
+				}
+			}
+
+			.bars {
+				position: relative;
+				width: 100%;
+				height: 3px;
+				background-color: $black-color;
+
+				&::before,
+				&::after {
+					position: absolute;
+					content: '';
+					height: 3px;
+					background-color: $black-color;
+					transition: width 0.3s;
+				}
+
+				&::before {
+					top: 10px;
+					left: 0;
+					width: 80%;
+				}
+
+				&::after {
+					top: 20px;
+					left: 0;
+					width: 60%;
+					transition-delay: 0.1s;
+				}
+			}
+		}
+	}
+
+	&__items {
+		display: none;
+	}
+
+	&__item {
+		position: relative;
+		padding: 0.5em 1em;
+
+		&::after {
+			@include underline($white-color);
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			transform: translateY(100%);
+			opacity: 0;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+
+		&:hover.nav__item::after {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&__logo {
+		padding: 0.5em;
+		font-size: clamp(3rem, 5vw, 5.4rem);
+
+		&-text {
+			position: relative;
+
+			&::after {
+				@include underline($white-color);
+				bottom: 0;
+				right: 0;
+				width: 50%;
+			}
+		}
+	}
+}
+
+.header {
+	position: relative;
+	height: 100svh;
+}
+
+@import 'media';

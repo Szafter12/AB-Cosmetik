@@ -1,0 +1,15 @@
+@media (min-width: 786px) {
+	.nav {
+		&__mobile {
+			display: none;
+		}
+		&__items {
+            display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2em;
+			height: 100%;
+			font-size: clamp(1.3rem, 3vw, 1.6rem);
+		}
+	}
+}
