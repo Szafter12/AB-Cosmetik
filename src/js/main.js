@@ -1,14 +1,27 @@
 window.addEventListener('DOMContentLoaded', () => {
-	const nav = document.querySelector('.nav__mobile-items')
+	const nav = document.querySelector('.nav')
+	const navMobile = document.querySelector('.nav__mobile-items')
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
+	const wave = document.querySelector('.waves')
 
-	const showMobile = () => {
-		if (nav.classList.contains('active-mobile')) {
-			nav.classList.remove('active-mobile')
+	const navScroll = () => {
+		if (window.scrollY > 0) {
+			wave.classList.add('waves-hidden')
+			nav.classList.add('nav-scroll')
 		} else {
-			nav.classList.add('active-mobile')
+			wave.classList.remove('waves-hidden')
+			nav.classList.remove('nav-scroll')
 		}
 	}
 
+	const showMobile = () => {
+		if (navMobile.classList.contains('active-mobile')) {
+			navMobile.classList.remove('active-mobile')
+		} else {
+			navMobile.classList.add('active-mobile')
+		}
+	}
+
+	window.addEventListener('scroll', navScroll)
 	burgerBtn.addEventListener('click', showMobile)
 })

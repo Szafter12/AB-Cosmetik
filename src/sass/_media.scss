@@ -12,4 +12,11 @@
 			font-size: clamp(1.3rem, 3vw, 1.6rem);
 		}
 	}
+
+}
+
+@media (min-width: 1200px) {
+	.waves-hidden {
+		transform: translateY(-100%);
+	}
 }

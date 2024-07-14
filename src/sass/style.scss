@@ -1,20 +1,25 @@
 @use 'utilities' as *;
 
 body {
-	min-height: 100svh;
 	background-color: $white-color;
+	background-image: url('../../dist/img/background.png');
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	color: $black-color;
 }
 
 .nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 2em 0;
 	width: 100%;
-	height: 20vh;
+	height: 20svh;
 	background-color: $main-color;
+	transition: height 0.4s;
+	z-index: 999;
 
 	&__mobile {
-        gap: 1em;
 		height: 100%;
 		width: 100%;
 
@@ -33,53 +38,45 @@ body {
 			z-index: 999;
 		}
 
-        .active-mobile {
-            transform: translateX(0);
-        }
+		.active-mobile {
+			transform: translateX(0);
+		}
 
 		&-burger {
-            display: flex;
+			display: flex;
 			flex-direction: column;
 			align-items: center;
 			margin-top: 10px;
 			padding: 0.5em 1em;
 			width: 60px;
-			height: 60px;
+			height: 40px;
 			z-index: 999;
-
-			&:hover {
-				.bars::after,
-				.bars::before {
-					width: 100%;
-				}
-			}
 
 			.bars {
 				position: relative;
 				width: 100%;
 				height: 3px;
+				border-radius: 20px;
 				background-color: $black-color;
 
 				&::before,
 				&::after {
-					position: absolute;
 					content: '';
+					position: absolute;
 					height: 3px;
+					width: 100%;
+					border-radius: 20px;
 					background-color: $black-color;
-					transition: width 0.3s;
 				}
 
 				&::before {
 					top: 10px;
 					left: 0;
-					width: 80%;
 				}
 
 				&::after {
 					top: 20px;
 					left: 0;
-					width: 60%;
-					transition-delay: 0.1s;
 				}
 			}
 		}
@@ -126,9 +123,37 @@ body {
 	}
 }
 
-.header {
-	position: relative;
-    height: 80vh;
+.nav-scroll {
+	height: 10svh;
 }
+
+.header {
+	min-height: 40svh;
+}
+
+// services
+
+.services {
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 2em;
+		align-items: center;
+	}
+
+	&__box{
+		width: 400px;
+		height: 300px;
+		border: 2px solid $black-color
+	}
+
+	&-one {
+		background-image: url('../../dist/img/services1-small.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+}
+
 
 @import 'media';

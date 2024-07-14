@@ -1,5 +1,9 @@
 @use 'colors' as *;
 // fonty
+@font-face {
+	font-family: 'Luxury';
+	src: url('../../fonts/Eveagita_Luxury.woff2');
+}
 
 .serif {
 	font-family: 'Playfair Display', serif;
@@ -32,22 +36,43 @@
     align-items: center;
 }
 
-.scroll {
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    justify-content: center;
-    width: 40px;
-    height: 60px;
-    border: 1px solid $black-color;
-    border-radius: 20px;
+.main-heading {
+    font-size: clamp(4rem,5vw,8rem);
+    text-align: center;
+}
 
-    .dot {
-        margin-top: 0.5em;
-        width: 15px;
-        height: 15px;
-        background-color: $main-color;
-        border-radius: 50%;
+.heading-color {
+    color: $secondary-color;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    background-color: $white-color;
+}
+
+.section {
+    padding: clamp(5em,5vw,8em) 2em;
+
+    &-title {
+        padding: 2em 0.5em;
+        text-align: center;
+        font-size: clamp(2.8rem,5vw,3.8rem);
+        background-color: $white-color;
+        font-weight: 400;
     }
 }
+
+.waves {
+    margin-top: 19svh;
+    transform: translateY(0);
+    transition: transform 0.4s;
+    z-index: -1;
+}
+
+.waves-hidden {
+    transform: translateY(-170%);
+}
+
 
