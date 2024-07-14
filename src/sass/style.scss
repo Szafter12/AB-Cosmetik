@@ -128,7 +128,8 @@ body {
 }
 
 .header {
-	min-height: 40svh;
+	position: relative;
+	min-height: 100svh;
 }
 
 // services
@@ -145,13 +146,13 @@ body {
 	&__box{
 		width: 400px;
 		height: 300px;
-		border: 2px solid $black-color
+		border: 2px solid $black-color;
+		background-position: center;
+		background-size: cover;
 	}
 
 	&-one {
 		background-image: url('../../dist/img/services1-small.jpg');
-		background-position: center;
-		background-size: cover;
 	}
 }
 

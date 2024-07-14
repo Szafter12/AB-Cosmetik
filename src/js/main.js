@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const navMobile = document.querySelector('.nav__mobile-items')
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
 	const wave = document.querySelector('.waves')
+	const firstSection = document.querySelector('#services')
 
 	const navScroll = () => {
 		if (window.scrollY > 0) {
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	
 	window.addEventListener('scroll', navScroll)
 	burgerBtn.addEventListener('click', showMobile)
 })

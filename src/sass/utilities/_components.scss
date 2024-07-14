@@ -21,58 +21,82 @@
 // mixins
 
 @mixin underline($bgc) {
-    content: '';
-    position: absolute;
-    height: 3px;
-    border-radius: 12px;
-    background-color: $bgc;
+	content: '';
+	position: absolute;
+	height: 3px;
+	border-radius: 12px;
+	background-color: $bgc;
 }
 
 // komponenty
 
 .d-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main-heading {
-    font-size: clamp(4rem,5vw,8rem);
-    text-align: center;
+	font-size: clamp(4rem, 5vw, 8rem);
+	text-align: center;
 }
 
 .heading-color {
-    color: $secondary-color;
+	color: $secondary-color;
 }
 
 .wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1600px;
-    background-color: $white-color;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1600px;
 }
 
 .section {
-    padding: clamp(5em,5vw,8em) 2em;
+	padding: 5em 2em;
+	background-color: $white-color;
 
-    &-title {
-        padding: 2em 0.5em;
-        text-align: center;
-        font-size: clamp(2.8rem,5vw,3.8rem);
-        background-color: $white-color;
-        font-weight: 400;
-    }
+	&-title {
+		padding: 2em 0.5em;
+		text-align: center;
+		font-size: clamp(2.8rem, 5vw, 3.8rem);
+		background-color: $white-color;
+		font-weight: 400;
+	}
 }
 
 .waves {
-    margin-top: 19svh;
-    transform: translateY(0);
-    transition: transform 0.4s;
-    z-index: -1;
+	margin-top: 19svh;
+	transform: translateY(0);
+	transition: transform 0.4s;
+	z-index: -1;
 }
 
 .waves-hidden {
-    transform: translateY(-170%);
+	transform: translateY(-170%);
 }
 
+.arrow-box {
+	position: absolute;
+    left: 50%;
+	bottom: 30px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid $black-color;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
 
+.arrow {
+	width: 50px;
+	height: 50px;
+    animation: arrow 2s infinite alternate;
+}
+
+@keyframes arrow {
+	from {
+		transform: translateY(-10px);
+	}
+	to {
+		transform: translateY(10px);
+	}
+}
