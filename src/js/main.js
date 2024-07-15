@@ -23,7 +23,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	
+	const setYear = () => {
+		const date = new Date()
+		let year = date.getFullYear()
+		const spanYear = document.querySelector('.year')
+
+		spanYear.textContent = year
+	}
+
+	setYear()
 	window.addEventListener('scroll', navScroll)
 	burgerBtn.addEventListener('click', showMobile)
 })

@@ -96,6 +96,12 @@
 	z-index: -1;
 }
 
+.waves-reverse {
+	display: none;
+	margin-bottom: -3em;
+	transform: rotate(180deg);
+}
+
 .waves-hidden {
 	transform: translateY(-170%);
 }
@@ -116,6 +122,10 @@
 	width: clamp(30px, 5vw, 40px);
 	height: clamp(30px, 5vw, 40px);
 	animation: arrow 2s infinite alternate;
+}
+
+.map {
+	margin-bottom: 4em;
 }
 
 @keyframes arrow {

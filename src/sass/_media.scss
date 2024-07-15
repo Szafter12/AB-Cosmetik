@@ -2,6 +2,7 @@
 	.contact {
 		&__info {
 			flex-direction: row;
+			text-align: left;
 		}
 	}
 }
@@ -49,5 +50,8 @@
 	}
 	.main-heading {
 		margin-top: 0.5em;
+	}
+	.waves-reverse {
+		display: block;
 	}
 }
