@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 	const nav = document.querySelector('.nav')
 	const navMobile = document.querySelector('.nav__mobile-items')
+	const navItems = document.querySelectorAll('.nav__item-moblie')
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
 	const wave = document.querySelector('.waves')
 	const firstSection = document.querySelector('#services')
@@ -30,6 +31,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		spanYear.textContent = year
 	}
+
+	navItems.forEach(item => {
+		item.addEventListener('click', () => {
+			navMobile.classList.remove('active-mobile')
+		})
+	})
 
 	setYear()
 	window.addEventListener('scroll', navScroll)

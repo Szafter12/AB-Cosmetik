@@ -2,3 +2,5 @@ node_modules
 html
 package-lock.json
 gulpfile.js
+robots.txt
+sitemap.xml

@@ -1,9 +1,5 @@
 @use 'colors' as *;
 // fonty
-@font-face {
-	font-family: 'Luxury';
-	src: url('../../fonts/Eveagita_Luxury.woff2');
-}
 
 .serif {
 	font-family: 'Playfair Display', serif;
@@ -37,17 +33,29 @@
 }
 
 .main-heading {
-	margin-top: 2em;
+	margin-top: 3em;
 	padding: 0 0.5em;
 	font-size: clamp(3.8rem, 5vw, 8rem);
 	text-align: center;
+	opacity: 0;
+	transform: translateY(-100%);
+	animation: heading-in 1s forwards;
 }
 
 .heading-color {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	background-clip: text;
+	color: transparent;
+}
+
+.heading-box {
 	display: block;
-	padding: 0.2em;
+	padding: 0.3em;
 	background-color: $black-color;
-	color: $secondary-color;
+	transform: rotate(-90deg);
+	border-radius: 14px;
+	opacity: 0;
+	animation: heading-box-in 1s 1s forwards;
 }
 
 .wrapper {
@@ -58,6 +66,7 @@
 
 .section {
 	padding: 5em 2em;
+	background-color: $white-color;
 
 	&-title {
 		position: relative;
@@ -110,16 +119,17 @@
 	bottom: 30px;
 	width: clamp(70px, 5vw, 100px);
 	height: clamp(70px, 5vw, 100px);
-	border: 1px solid $black-color;
 	background-color: $black-color;
 	border-radius: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%) translateY(100%);
+	opacity: 0;
+	animation: arrow-in 1s 2s forwards ease;
 }
 
 .arrow {
 	width: clamp(30px, 5vw, 40px);
 	height: clamp(30px, 5vw, 40px);
-	animation: arrow 2s infinite alternate;
+	animation: arrow 1.2s linear infinite alternate;
 }
 
 .map {
@@ -132,5 +142,26 @@
 	}
 	to {
 		transform: translateY(10px);
+	}
+}
+
+@keyframes arrow-in {
+	to {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
+@keyframes heading-in {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes heading-box-in {
+	to {
+		transform: rotate(0);
+		opacity: 1;
 	}
 }

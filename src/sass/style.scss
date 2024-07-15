@@ -2,6 +2,7 @@
 
 body {
 	background-color: $white-color;
+	background-image: url('../../dist/img/background.png');
 	font-family: 'Poppins', sans-serif;
 	font-size: clamp(1.4rem,5vw,1.6rem);
 	color: $black-color;
@@ -129,26 +130,24 @@ body {
 .header {
 	position: relative;
 	min-height: 100svh;
-	background-image: url('../../dist/img/background.png');
 }
 
 // services
 
 .services {
 	&__container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
 		gap: 2em;
-		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	&__box {
 		width: 400px;
 		height: 300px;
 		border: 1px solid $black-color;
+		border-radius: 14px;
 		background-position: center;
 		background-size: cover;
+		text-align: center;
 	}
 }
 
