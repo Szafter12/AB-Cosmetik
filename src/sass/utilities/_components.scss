@@ -37,11 +37,16 @@
 }
 
 .main-heading {
-	font-size: clamp(4rem, 5vw, 8rem);
+	margin-top: 2em;
+	padding: 0 0.5em;
+	font-size: clamp(3.8rem, 5vw, 8rem);
 	text-align: center;
 }
 
 .heading-color {
+	display: block;
+	padding: 0.2em;
+	background-color: $black-color;
 	color: $secondary-color;
 }
 
@@ -56,11 +61,31 @@
 	background-color: $white-color;
 
 	&-title {
+		position: relative;
 		padding: 2em 0.5em;
 		text-align: center;
 		font-size: clamp(2.8rem, 5vw, 3.8rem);
 		background-color: $white-color;
 		font-weight: 400;
+		overflow: hidden;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			height: 3px;
+			width: 25%;
+			background-color: $main-color;
+			transform: translateY(-50%);
+		}
+
+		&::before {
+			left: 0;
+		}
+		&::after {
+			right: 0;
+		}
 	}
 }
 
@@ -77,19 +102,20 @@
 
 .arrow-box {
 	position: absolute;
-    left: 50%;
+	left: 50%;
 	bottom: 30px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid $black-color;
-    border-radius: 50%;
-    transform: translateX(-50%);
+	width: clamp(70px, 5vw, 100px);
+	height: clamp(70px, 5vw, 100px);
+	border: 1px solid $black-color;
+	background-color: $black-color;
+	border-radius: 50%;
+	transform: translateX(-50%);
 }
 
 .arrow {
-	width: 50px;
-	height: 50px;
-    animation: arrow 2s infinite alternate;
+	width: clamp(30px, 5vw, 40px);
+	height: clamp(30px, 5vw, 40px);
+	animation: arrow 2s infinite alternate;
 }
 
 @keyframes arrow {

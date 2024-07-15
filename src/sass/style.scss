@@ -2,7 +2,6 @@
 
 body {
 	background-color: $white-color;
-	background-image: url('../../dist/img/background.png');
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	color: $black-color;
@@ -22,6 +21,7 @@ body {
 	&__mobile {
 		height: 100%;
 		width: 100%;
+		justify-content: space-evenly;
 
 		&-items {
 			position: fixed;
@@ -46,7 +46,6 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 10px;
 			padding: 0.5em 1em;
 			width: 60px;
 			height: 40px;
@@ -130,6 +129,7 @@ body {
 .header {
 	position: relative;
 	min-height: 100svh;
+	background-image: url('../../dist/img/background.png');
 }
 
 // services
@@ -143,7 +143,7 @@ body {
 		align-items: center;
 	}
 
-	&__box{
+	&__box {
 		width: 400px;
 		height: 300px;
 		border: 2px solid $black-color;
@@ -156,5 +156,29 @@ body {
 	}
 }
 
+// kontakt
+
+.contact {
+	h3 {
+		margin-bottom: 1em;
+	}
+	&__box {
+		flex-direction: column;
+		gap: 3em;
+	}
+	&__info {
+		flex-direction: column;
+		gap: 3em;
+		text-align: center;
+	}
+	&__hours {
+		flex-direction: column;
+		gap: 1em;
+		text-align: center;
+		span {
+			margin-left: 1.5em;
+		}
+	}
+}
 
 @import 'media';
