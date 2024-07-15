@@ -146,13 +146,9 @@ body {
 	&__box {
 		width: 400px;
 		height: 300px;
-		border: 2px solid $black-color;
+		border: 1px solid $black-color;
 		background-position: center;
 		background-size: cover;
-	}
-
-	&-one {
-		background-image: url('../../dist/img/services1-small.jpg');
 	}
 }
 
