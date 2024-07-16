@@ -33,7 +33,10 @@
 }
 
 .main-heading {
-	margin-top: 3em;
+	gap: 0.3em;
+	flex-wrap: wrap;
+	margin-top: 2.5em;
+	width: 100%;
 	padding: 0 0.5em;
 	font-size: clamp(3.8rem, 5vw, 8rem);
 	text-align: center;
@@ -49,8 +52,8 @@
 }
 
 .heading-box {
-	display: block;
 	padding: 0.3em;
+	width: 100%;
 	background-color: $black-color;
 	transform: rotate(-90deg);
 	border-radius: 14px;
@@ -97,15 +100,15 @@
 }
 
 .waves {
-	margin-top: 19svh;
-	transform: translateY(0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(19svh);
 	transition: transform 0.4s;
-	z-index: -1;
 }
 
 .waves-reverse {
-	display: none;
-	margin-bottom: -3em;
+	margin-bottom: -1em;
 	transform: rotate(180deg);
 }
 

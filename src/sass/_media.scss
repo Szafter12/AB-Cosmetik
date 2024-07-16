@@ -5,11 +5,11 @@
 			text-align: left;
 		}
 	}
+	.heading-box {
+		width: auto;
+	}
 }
 @media (min-width: 768px) {
-	.heading-box {
-		display: inline-block;
-	}
 	.section {
 		&-title {
 			&::after,
@@ -47,11 +47,5 @@
 @media (min-width: 1200px) {
 	.waves-hidden {
 		transform: translateY(-100%);
-	}
-	.main-heading {
-		margin-top: 0.5em;
-	}
-	.waves-reverse {
-		display: block;
 	}
 }
