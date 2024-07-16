@@ -100,11 +100,10 @@
 }
 
 .waves {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translateY(19svh);
+	position: relative;
+	margin-top: 2em;
 	transition: transform 0.4s;
+	z-index: -1;
 }
 
 .waves-reverse {
