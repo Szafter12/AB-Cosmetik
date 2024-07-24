@@ -18,7 +18,18 @@
 <body>
     <nav class="nav">
     <div class="nav__items">
-        <a href="#services" class="nav__item" aria-label="Informacje o naszych usługach">Usługi</a>
+        <div class="nav__item menu-item">Usługi
+            <div class="dropdown d-flex">
+                <a class="nav__item" href="#hands" aria-label="Usługi dotyczące dłoni">Dłonie</a>
+                <a class="nav__item" href="#face" aria-label="Usługi dotyczące twarzy">Twarz</a>
+                <a class="nav__item" href="#feets" aria-label="Usługi dotyczące stóp">Stopy</a>
+                <a class="nav__item" href="#eyelashes" aria-label="Usługi dotyczące rzęs">Rzęsy</a>
+                <a class="nav__item" href="#makeup" aria-label="Usługi dotyczące makijażu">Makijaż</a>
+                <a class="nav__item" href="#eyebrows" aria-label="Usługi dotyczące brwi">Brwi</a>
+                <a class="nav__item" href="#depilation" aria-label="Usługi dotyczące depilacji">Depilacja</a>
+                <a class="nav__item" href="#others" aria-label="Inne usługi">inne</a>
+            </div>
+        </div>
         <a href="#" class="nav__item" aria-label="Galeria zdjęć salonu">Galeria</a>
         <a href="#" class="nav__logo serif" aria-label="Srona główna">
             <p class="nav__logo-text">AB Cosmetik</p>
@@ -28,8 +39,19 @@
     </div>
     <div class="nav__mobile d-flex">
         <div class="nav__mobile-items d-flex serif">
-            <a href="#services" class="nav__item nav__item-moblie"
-                aria-label="Informacje o naszych usługach">Usługi</a>
+            <div class="nav__mobile-dropdown">
+                <a class="nav__item">Usługi</a>
+                <div class="nav__mobile-dropdown--box d-flex">
+                    <a class="nav__item nav__item-moblie" href="#hands" aria-label="Usługi dotyczące dłoni">Dłonie</a>
+                    <a class="nav__item nav__item-moblie" href="#face" aria-label="Usługi dotyczące twarzy">Twarz</a>
+                    <a class="nav__item nav__item-moblie" href="#feets" aria-label="Usługi dotyczące stóp">Stopy</a>
+                    <a class="nav__item nav__item-moblie" href="#eyelashes" aria-label="Usługi dotyczące rzęs">Rzęsy</a>
+                    <a class="nav__item nav__item-moblie" href="#makeup" aria-label="Usługi dotyczące makijażu">Makijaż</a>
+                    <a class="nav__item nav__item-moblie" href="#eyebrows" aria-label="Usługi dotyczące brwi">Brwi</a>
+                    <a class="nav__item nav__item-moblie" href="#depilation" aria-label="Usługi dotyczące depilacji">Depilacja</a>
+                    <a class="nav__item nav__item-moblie" href="#others" aria-label="Inne usługi">inne</a>
+                </div>
+            </div>
             <a href="#" class="nav__item nav__item-moblie" aria-label="Galeria zdjęć salonu">Galeria</a>
             <a href="#aboutUs" class="nav__item nav__item-moblie" aria-label="Informacje o naszej firmię">O
                 nas</a>
@@ -49,9 +71,11 @@
     </svg>
 </nav>
 <header class="header d-flex">
-  
+
     <h1 class="main-heading serif d-flex">
-        Zapraszamy do <div class="heading-box"><p class="heading-color">AB Cosmetik</p></div>
+        Zapraszamy do <div class="heading-box">
+            <p class="heading-color">AB Cosmetik</p>
+        </div>
     </h1>
     <a href="#services" class="arrow-box d-flex" aria-label="Informacje o naszych usługach">
         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
@@ -63,7 +87,7 @@
         <section class="section services" id="services">
             <h2 class="section-title"><span>Usługi</span></h2>
             <div class="wrapper">
-                <h3>Dłonie</h3>
+                <h3 id="hands">Dłonie</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Manicure hybrydowy 1 kolor</h4>
@@ -118,7 +142,7 @@
                         <span class="services__price bold">+ 10 zł</span>
                     </div>
                 </div>
-                <h3>Twarz</h3>
+                <h3 id="face">Twarz</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Zabieg mikrodermabrazji + kwas</h4>
@@ -153,7 +177,7 @@
                         <span class="services__price bold">250 zł</span>
                     </div>
                 </div>
-                <h3>Stopy</h3>
+                <h3 id="feets">Stopy</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Manicure hybrydowy</h4>
@@ -176,7 +200,7 @@
                         <span class="services__price bold">20 zł</span>
                     </div>
                 </div>
-                <h3>Rzęsy</h3>
+                <h3 id="eyelashes">Rzęsy</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">1:1</h4>
@@ -215,7 +239,7 @@
                         <span class="services__price bold">Od 150 zł</span>
                     </div>
                 </div>
-                <h3>Makijaż</h3>
+                <h3 id="makeup">Makijaż</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Makijaż okazjonalny + kępki rzęs</h4>
@@ -230,7 +254,7 @@
                         <span class="services__price bold">50 zł</span>
                     </div>
                 </div>
-                <h3>Brwi</h3>
+                <h3 id="eyebrows">Brwi</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Regulacja brwi</h4>
@@ -265,7 +289,7 @@
                         <span class="services__price bold">110 zł</span>
                     </div>
                 </div>
-                <h3>Depilacja</h3>
+                <h3 id="depilation">Depilacja</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Wąsik</h4>
@@ -300,7 +324,7 @@
                         <span class="services__price bold">40 zł</span>
                     </div>
                 </div>
-                <h3>Inne</h3>
+                <h3 id="others">Inne</h3>
                 <div class="services__container">
                     <div class="services__box d-flex">
                         <h4 class="services__title">Przekłucie ucha</h4>
@@ -342,13 +366,34 @@
                         </div>
                         <div class="contact__hours d-flex">
                             <h3>Godziny otwarcia:</h3>
-                            <p>Pon: <span>09:30 - 17:00</span></p>
-                            <p>Wt: <span>09:30 - 17:00</span></p>
-                            <p>Śr: <span>09:30 - 17:00</span></p>
-                            <p>Czw: <span>09:30 - 17:00</span></p>
-                            <p>Pt: <span>09:30 - 17:00</span></p>
-                            <p>Sob: <span>09:30 - 13:00</span></p>
-                            <p>Niedź: <span>Zamknięte</span></p>
+                            <div class="contact__hours-box">
+                                <p>Pon:</p>
+                                <p>09:30 - 17:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Wt:</p>
+                                <p>09:30 - 17:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Śr:</p>
+                                <p>09:30 - 17:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Czw:</p>
+                                <p>09:30 - 17:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Pt:</p>
+                                <p>09:30 - 17:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Sob:</p>
+                                <p>09:30 - 13:00</p>
+                            </div>
+                            <div class="contact__hours-box">
+                                <p>Niedź:</p>
+                                <p>Zamknięte</p>
+                            </div>   
                         </div>
                     </div>
                 </div>

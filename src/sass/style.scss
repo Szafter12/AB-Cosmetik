@@ -19,6 +19,53 @@ body {
 	transition: height 0.4s;
 	z-index: 999;
 
+	ul {
+		list-style: none;
+	}
+
+	.menu-item {
+		display: inline-block;
+		cursor: default;
+	}
+	
+	.dropdown {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		flex-direction: column;
+		z-index: 1000;
+
+		&:first-child {
+			padding-top: 2em;
+		}
+	}
+	
+	.dropdown a {
+		display: none;
+		text-align: left;
+		padding: 1em 2em;
+		width: 200px;
+		background-color: $main-color;
+		opacity: 0;
+	}
+	
+	.menu-item:hover .dropdown a {
+		display: block;
+		animation: menu1 0.3s forwards;
+	}
+
+	@keyframes menu1 {
+		from {
+			opacity: 0;
+			transform: rotate(36deg);
+		}
+	
+		to {
+			opacity: 1;
+			transform: rotate(0);
+		}
+	}
+
 	&__mobile {
 		height: 100%;
 		width: 100%;
@@ -37,6 +84,17 @@ body {
 			transform: translateX(-100%);
 			transition: transform 0.4s;
 			z-index: 999;
+		}
+
+		&-dropdown {
+			text-align: center;
+
+			&--box {
+				margin-top: 0.5em;
+				flex-wrap: wrap;
+				height: 100px;
+				overflow-y: auto;
+			}
 		}
 
 		.active-mobile {
@@ -137,10 +195,36 @@ body {
 	// services
 	.services {
 		h3 {
+			position: relative;
 			margin: 2em 0;
-			font-weight: 100;
-			font-size: clamp(2.2rem, 3vw, 2.8rem);
+			padding: 3em 0;
+			font-weight: 400;
+			text-align: center;
+			font-size: clamp(2.5rem, 3vw, 3rem);
+			background-color: $main-color;
+			border-radius: 12px;
+			overflow: hidden;
+
+			&::before,&::after {
+				content: '';
+				position: absolute;
+				width: 50%;
+				height: 30px;
+				background-color: $white-color;
+				transform: skew(60deg);
+			}
+
+			&::before {
+				top: 0;
+				right: -10%;
+			}
+
+			&::after {
+				bottom: 0;
+				left: -10%;
+			}
 		}
+	
 		&__container {
 			display: flex;
 			flex-wrap: wrap;
@@ -151,9 +235,11 @@ body {
 		}
 		&__box {
 			flex-direction: column;
+			line-height: 30px;
 			gap: 3em;
 			padding: 1em;
-			width: 300px;
+			width: 350px;
+			background-color: $white-color;
 			min-height: 200px;
 			box-shadow: 0 0 4px hsla(350, 93%, 72%, 0.5);
 			border-radius: 12px;
@@ -166,13 +252,14 @@ body {
 			}
 		}
 		&__title {
-			font-size: clamp(1.8rem, 3vw, 2rem);
+			font-size: clamp(1.6rem, 3vw, 1.8rem);
 			font-weight: 400;
 		}
 		&__price {
 			display: inline-block;
-			padding: 1em;
+			padding: 0.5em 1em;
 			border-radius: 8px;
+			text-wrap: nowrap;
 			font-size: clamp(1.6rem,3vw,1.8rem);
 			border: 2px solid $secondary-color;
 			color: $secondary-color;
@@ -197,12 +284,23 @@ body {
 			gap: 3em;
 			text-align: center;
 		}
+
+		&__info,&__hours {
+			padding: 2em;
+			background-color: $white-color;
+			box-shadow: 0 0 4px hsla(350, 93%, 72%, 0.5);
+			border-radius: 12px;
+		}
 		&__hours {
 			gap: 1em;
-			span {
-				margin-left: 1.5em;
+			&-box {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
 			}
 		}
+
 	}
 
 // footer
