@@ -266,6 +266,34 @@ body {
 
 // about us
 
+.aboutUs {
+	background-color: $black-color;
+	color: $white-color;
+
+	h3 {
+		font-size: clamp(2.4rem, 3vw, 3.2rem);
+		margin-bottom: 2em;
+	}
+
+	&__box {
+		height: 100%;
+		gap: 4em;
+	}
+
+	&__info {
+		font-size: clamp(1.8rem,3vw,2rem);
+		line-height: 3.5rem;
+		text-align: left;
+	}
+
+	&__img {
+		width: 600px;
+		height: auto;
+		object-fit: cover;
+		border-radius: 12px;
+	}
+}
+
 // kontakt
 
 .contact {
