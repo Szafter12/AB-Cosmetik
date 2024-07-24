@@ -35,7 +35,6 @@
 .main-heading {
 	gap: 0.3em;
 	flex-wrap: wrap;
-	margin-top: 2.5em;
 	width: 100%;
 	padding: 0 0.5em;
 	font-size: clamp(3.8rem, 5vw, 8rem);
@@ -70,6 +69,7 @@
 .section {
 	padding: 5em 2em;
 	background-color: $white-color;
+	z-index: 1000;
 
 	&-title {
 		position: relative;
@@ -102,17 +102,19 @@
 .waves {
 	position: relative;
 	margin-top: 1.3em;
-	transition: transform 0.4s;
-	z-index: -1;
+	height: auto;
+	transition: transform 0.4s, height 0.4s;
+	z-index: -999;
+}
+
+
+.nav-scroll .waves {
+	transform: translateY(-170%);
 }
 
 .waves-reverse {
 	margin-bottom: -1em;
 	transform: rotate(180deg);
-}
-
-.waves-hidden {
-	transform: translateY(-170%);
 }
 
 .arrow-box {

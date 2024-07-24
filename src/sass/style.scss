@@ -128,54 +128,82 @@ body {
 }
 
 .header {
+	padding-top: 20vh;
 	position: relative;
 	min-height: 100svh;
 }
 
-// services
 
-.services {
-	&__container {
-		gap: 2em;
-		flex-wrap: wrap;
-	}
+	// services
+	.services {
+		h3 {
+			margin: 2em 0;
+			font-weight: 100;
+			font-size: clamp(2.2rem, 3vw, 2.8rem);
+		}
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2em;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+		&__box {
+			flex-direction: column;
+			gap: 3em;
+			padding: 1em;
+			width: 300px;
+			min-height: 200px;
+			box-shadow: 0 0 4px hsla(350, 93%, 72%, 0.5);
+			border-radius: 12px;
+			text-align: center;
+			transition: scale 0.3s, box-shadow 0.3s;
 
-	&__box {
-		width: 400px;
-		height: 300px;
-		border: 1px solid $black-color;
-		border-radius: 14px;
-		background-position: center;
-		background-size: cover;
-		text-align: center;
-	}
-}
-
-// about us
-
-// kontakt
-
-.contact {
-	h3 {
-		margin-bottom: 1em;
-	}
-	p {
-		margin-bottom: 0.8em;
-	}
-	&__box,
-	&__info,
-	&__hours {
-		flex-direction: column;
-		gap: 3em;
-		text-align: center;
-	}
-	&__hours {
-		gap: 1em;
-		span {
-			margin-left: 1.5em;
+			&:hover {
+				box-shadow: 0 0 5px hsl(350, 93%, 72%);
+				scale: 1.1;
+			}
+		}
+		&__title {
+			font-size: clamp(1.8rem, 3vw, 2rem);
+			font-weight: 400;
+		}
+		&__price {
+			display: inline-block;
+			padding: 1em;
+			border-radius: 8px;
+			font-size: clamp(1.6rem,3vw,1.8rem);
+			border: 2px solid $secondary-color;
+			color: $secondary-color;
 		}
 	}
-}
+
+	// about us
+
+	// kontakt
+
+	.contact {
+		h3 {
+			margin-bottom: 1em;
+		}
+		p {
+			margin-bottom: 0.8em;
+		}
+		&__box,
+		&__info,
+		&__hours {
+			flex-direction: column;
+			gap: 3em;
+			text-align: center;
+		}
+		&__hours {
+			gap: 1em;
+			span {
+				margin-left: 1.5em;
+			}
+		}
+	}
 
 // footer
 

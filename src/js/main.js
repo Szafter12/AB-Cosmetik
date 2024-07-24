@@ -4,15 +4,18 @@ window.addEventListener('DOMContentLoaded', () => {
 	const navItems = document.querySelectorAll('.nav__item-moblie')
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
 	const wave = document.querySelector('.waves')
-	const firstSection = document.querySelector('#services')
 
 	const navScroll = () => {
 		if (window.scrollY > 0) {
-			wave.classList.add('waves-hidden')
 			nav.classList.add('nav-scroll')
+			setTimeout(() => {
+				if (window.scrollY > 0) {
+					wave.style.height = '0'
+				}
+			}, 500)
 		} else {
-			wave.classList.remove('waves-hidden')
 			nav.classList.remove('nav-scroll')
+			wave.style.height = 'auto'
 		}
 	}
 
