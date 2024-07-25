@@ -7,6 +7,7 @@ body {
 	font-size: clamp(1.4rem, 5vw, 1.6rem);
 	line-height: 1.6;
 	color: $black-color;
+	overflow-y: auto;
 }
 
 .nav {
