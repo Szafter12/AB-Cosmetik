@@ -3,8 +3,9 @@
 body {
 	background-color: $white-color;
 	background-image: url('../../dist/img/background.png');
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: clamp(1.4rem, 5vw, 1.6rem);
+	line-height: 1.6;
 	color: $black-color;
 }
 
@@ -26,6 +27,11 @@ body {
 	.menu-item {
 		display: inline-block;
 		cursor: default;
+
+		.dropdown-arrow {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	.dropdown {
@@ -197,30 +203,10 @@ body {
 		padding: 3em 0;
 		font-weight: 400;
 		text-align: center;
-		font-size: clamp(2.5rem, 3vw, 3rem);
+		font-size: clamp(2.5rem, 3vw, 3.2rem);
 		background-color: $main-color;
 		border-radius: 12px;
 		overflow: hidden;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 50%;
-			height: 30px;
-			background-color: $white-color;
-			transform: skew(60deg);
-		}
-
-		&::before {
-			top: 0;
-			right: -10%;
-		}
-
-		&::after {
-			bottom: 0;
-			left: -10%;
-		}
 	}
 
 	&__container {
@@ -250,7 +236,7 @@ body {
 		}
 	}
 	&__title {
-		font-size: clamp(1.6rem, 3vw, 1.8rem);
+		font-size: clamp(1.6rem, 3vw, 2rem);
 		font-weight: 400;
 	}
 	&__price {
@@ -271,26 +257,53 @@ body {
 	color: $white-color;
 
 	h3 {
-		font-size: clamp(2.4rem, 3vw, 3.2rem);
+		font-size: clamp(2.2rem, 5vw, 3.2rem);
 		margin-bottom: 2em;
+		z-index: 2;
+		line-height: 1.2;
 	}
 
 	&__box {
-		height: 100%;
+		flex-direction: column;
 		gap: 4em;
+		margin-bottom: 5em;
+		height: 100%;
 	}
 
 	&__info {
-		font-size: clamp(1.8rem,3vw,2rem);
-		line-height: 3.5rem;
+		font-size: clamp(1.6rem, 5vw, 2rem);
 		text-align: left;
 	}
 
 	&__img {
-		width: 600px;
-		height: auto;
+		width: 100%;
+		height: 400px;
 		object-fit: cover;
 		border-radius: 12px;
+	}
+
+	.hero-img--2 {
+		background-image: url('../img/small-hero2.jpg');
+		background-attachment: fixed;
+	}
+
+	.img__container {
+		margin: 5em 0;
+		flex-wrap: wrap;
+		gap: 3em;
+
+		img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.white__box,
+	.white__box-reverse {
+		background-color: $black-color;
+		transform: skew(45deg);
 	}
 }
 

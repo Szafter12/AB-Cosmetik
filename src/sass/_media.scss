@@ -11,6 +11,19 @@
 	.hero-img {
 		background-image: url('../img/big-hero.jpg');
 	}
+	.aboutUs {
+		.hero-img--2 {
+			background-image: url('../img/big-hero2.jpg');
+		}
+		.img__container {
+			img {
+				width: 500px;
+				height: 500px;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
 }
 @media (min-width: 768px) {
 	.section {
@@ -47,6 +60,21 @@
 			height: 100%;
 			font-size: clamp(1.3rem, 3vw, 1.8rem);
 			z-index: 999;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.aboutUs {
+		&__box {
+			flex-direction: row;
+		}
+		&__box--reverse {
+			flex-direction: row-reverse;
+		}
+		&__img {
+			width: 700px;
+			height: auto;
 		}
 	}
 }

@@ -10,7 +10,7 @@
 <meta name="author" content="Jakub Pachut">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;wght@400;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@100..900&display=swap"
     rel="stylesheet">
 <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
@@ -19,7 +19,13 @@
     <nav class="nav">
     <div class="nav__items">
         <div class="nav__item menu-item">
-            <a href="#services" aria-label="Informacje o naszych usługach">Usługi</a>
+            <div class="d-flex">
+                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                    <path style="fill:#333333"
+                        d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z" />
+                </svg>
+                <a href="#services" aria-label="Informacje o naszych usługach">Usługi</a>
+            </div>
             <div class="dropdown d-flex">
                 <a class="nav__item" href="#hands" aria-label="Usługi dotyczące dłoni">Dłonie</a>
                 <a class="nav__item" href="#face" aria-label="Usługi dotyczące twarzy">Twarz</a>
@@ -91,7 +97,11 @@
     <section class="section services" id="services">
         <h2 class="section-title"><span>Usługi</span></h2>
         <div class="wrapper">
-            <h3 id="hands">Dłonie</h3>
+            <h3 id="hands">
+                Dłonie
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Manicure hybrydowy 1 kolor</h4>
@@ -146,7 +156,11 @@
                     <span class="services__price bold">+ 10 zł</span>
                 </div>
             </div>
-            <h3 id="face">Twarz</h3>
+            <h3 id="face">
+                Twarz
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Zabieg mikrodermabrazji + kwas</h4>
@@ -182,7 +196,11 @@
                     <span class="services__price bold">250 zł</span>
                 </div>
             </div>
-            <h3 id="feets">Stopy</h3>
+            <h3 id="feets">
+                Stopy
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Manicure hybrydowy</h4>
@@ -205,7 +223,11 @@
                     <span class="services__price bold">20 zł</span>
                 </div>
             </div>
-            <h3 id="eyelashes">Rzęsy</h3>
+            <h3 id="eyelashes">
+                Rzęsy
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">1:1</h4>
@@ -244,7 +266,11 @@
                     <span class="services__price bold">Od 150 zł</span>
                 </div>
             </div>
-            <h3 id="makeup">Makijaż</h3>
+            <h3 id="makeup">
+                Makijaż
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Makijaż okazjonalny + kępki rzęs</h4>
@@ -259,7 +285,11 @@
                     <span class="services__price bold">50 zł</span>
                 </div>
             </div>
-            <h3 id="eyebrows">Brwi</h3>
+            <h3 id="eyebrows">
+                Brwi
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Regulacja brwi</h4>
@@ -294,7 +324,12 @@
                     <span class="services__price bold">110 zł</span>
                 </div>
             </div>
-            <h3 id="depilation">Depilacja</h3>
+            <h3 id="depilation">
+                Depilacja
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
+
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Wąsik</h4>
@@ -329,7 +364,11 @@
                     <span class="services__price bold">40 zł</span>
                 </div>
             </div>
-            <h3 id="others">Inne</h3>
+            <h3 id="others">
+                Inne
+                <div class="white__box"></div>
+                <div class="white__box-reverse"></div>
+            </h3>
             <div class="services__container">
                 <div class="services__box d-flex">
                     <h4 class="services__title">Przekłucie ucha</h4>
@@ -352,16 +391,52 @@
         </div>
         <div class="wrapper">
             <div class="aboutUs__box d-flex">
-                <img class="aboutUs__img" src="https://scontent-fra5-1.xx.fbcdn.net/v/t39.30808-6/209277696_5698706526867978_1624886218619102197_n.png?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_R0WUM8vKyQQ7kNvgHymVEx&_nc_ht=scontent-fra5-1.xx&oh=00_AYCVIaD0o2ghvHawU55EXVdqSGpL63kfs8PbtRjGL8vvlw&oe=66A71147" alt="">
                 <div class="aboutUs__info">
                     <h3>O Nas</h3>
                     <p>
-                        Witamy w naszym salonie kosmetycznym, gdzie piękno spotyka się z profesjonalizmem. Naszą misją jest
+                        Witamy w naszym salonie kosmetycznym, gdzie piękno spotyka się z profesjonalizmem. Naszą misją
+                        jest
                         dostarczanie najwyższej jakości usług kosmetycznych, które podkreślą Twoje naturalne piękno i
                         sprawią, że poczujesz się wyjątkowo. Wierzymy, że każdy zasługuje na chwilę relaksu i odrobinę
                         luksusu w codziennym życiu.
                     </p>
                 </div>
+                <img class="aboutUs__img"
+                    src="https://scontent-fra5-1.xx.fbcdn.net/v/t39.30808-6/209277696_5698706526867978_1624886218619102197_n.png?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_R0WUM8vKyQQ7kNvgHymVEx&_nc_ht=scontent-fra5-1.xx&oh=00_AYCVIaD0o2ghvHawU55EXVdqSGpL63kfs8PbtRjGL8vvlw&oe=66A71147"
+                    alt="">
+            </div>
+            <div class="aboutUs__box aboutUs__box--reverse d-flex">
+                <div class="aboutUs__info">
+                    <h3>Nasz Zespół</h3>
+                    <p>
+                        Jesteśmy zespołem wykwalifikowanych i doświadczonych specjalistów, którzy z pasją i
+                        zaangażowaniem podchodzą do swojej pracy. Każdy z nas posiada szeroką wiedzę z zakresu
+                        kosmetologii oraz liczne certyfikaty potwierdzające nasze umiejętności. Naszym priorytetem jest
+                        Twoje zadowolenie i komfort, dlatego każda wizyta w naszym salonie to indywidualne podejście i
+                        dbałość o najmniejsze szczegóły.
+                    </p>
+                </div>
+                <img class="aboutUs__img"
+                    src="https://scontent-fra5-1.xx.fbcdn.net/v/t39.30808-6/209277696_5698706526867978_1624886218619102197_n.png?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_R0WUM8vKyQQ7kNvgHymVEx&_nc_ht=scontent-fra5-1.xx&oh=00_AYCVIaD0o2ghvHawU55EXVdqSGpL63kfs8PbtRjGL8vvlw&oe=66A71147"
+                    alt="">
+            </div>
+        </div>
+        <div class="hero-img hero-img--2 d-flex">
+            <h3>Zapraszamy do salonu</h3>
+            <div class="white__box"></div>
+            <div class="white__box-reverse"></div>
+        </div>
+        <div class="wrapper">
+            <h3>Nasz salon</h3>
+            <p class="aboutUs__info">
+                AB Cosmetik to miejsce, gdzie piękno spotyka się z doskonałością. Nasz salon to przestrzeń stworzona z myślą o Twoim komforcie i dobrym samopoczuciu. Oferujemy szeroką gamę usług kosmetycznych, które pomogą Ci zadbać o urodę i odprężyć się po ciężkim dniu. Nasz zespół doświadczonych specjalistów zadba o każdy detal, aby zapewnić Ci najwyższy standard obsługi.
+            </p>
+            <div class="img__container d-flex">
+                <img src="https://scontent-fra5-1.xx.fbcdn.net/v/t39.30808-6/209277696_5698706526867978_1624886218619102197_n.png?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_R0WUM8vKyQQ7kNvgHymVEx&_nc_ht=scontent-fra5-1.xx&oh=00_AYCVIaD0o2ghvHawU55EXVdqSGpL63kfs8PbtRjGL8vvlw&oe=66A71147" alt="">
+                <img src="./dist/img/img1.png" alt="">
+                <img src="./dist/img/img2.jpg" alt="">
+                <img src="./dist/img/img3.jpg" alt="">
+                <img src="./dist/img/img4.jpg" alt="">
             </div>
         </div>
     </section>
@@ -379,7 +454,7 @@
                         <div class="contact__tel">
                             <h3>Kontakt:</h3>
                             <p>Nr tel: 534 377 375</p>
-                            <p>E-mail: example@kontakt.com</p>
+                            <p>E-mail: ab.cosmetik@op.pl</p>
                         </div>
                     </div>
                     <div class="contact__hours d-flex">
