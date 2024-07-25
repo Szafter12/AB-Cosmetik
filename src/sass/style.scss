@@ -3,11 +3,22 @@
 body {
 	background-color: $white-color;
 	background-image: url('../../dist/img/background.png');
+	background-position: 0 var(--height);
 	font-family: 'Montserrat', sans-serif;
 	font-size: clamp(1.4rem, 5vw, 1.6rem);
 	line-height: 1.6;
 	color: $black-color;
 	overflow-y: auto;
+	animation: home 100s linear infinite;
+}
+
+@keyframes home {
+	from {
+		background-position: 0 , 0;
+	}
+	to {
+		background-position: 0 var(--height);
+	}
 }
 
 .nav {

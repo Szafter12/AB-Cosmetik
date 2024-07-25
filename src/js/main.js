@@ -4,6 +4,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	const navItems = document.querySelectorAll('.nav__item-moblie')
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
 	const wave = document.querySelector('.waves')
+	const home = document.querySelector('body')
+
+	home.style.setProperty = ('--height', window.innerHeight + 'px')
 
 	const navScroll = () => {
 		if (window.scrollY > 0) {
