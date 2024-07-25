@@ -88,7 +88,7 @@
 }
 
 .section {
-	background-color: $white-color;
+	// background-color: $white-color;
 	z-index: 1000;
 
 	&-title {
@@ -178,6 +178,20 @@
 
 .map {
 	margin-bottom: 4em;
+}
+
+.up-box {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	padding: 1.5em;
+	background-color: $main-color;
+	transform: translateY(200%);
+	transition: transform 0.3s;
+}
+
+.show__up-box {
+	transform: translateY(0);
 }
 
 @keyframes arrow {
