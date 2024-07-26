@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const wave = document.querySelector('.waves')
 	const home = document.querySelector('body')
 	const upBox = document.querySelector('.up-box')
-	const allSection = document.querySelectorAll('.section')
 
 	home.style.setProperty = ('--height', window.innerHeight + 'px')
 

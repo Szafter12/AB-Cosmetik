@@ -33,10 +33,9 @@
 }
 
 .main-heading {
-	gap: 0.3em;
 	flex-wrap: wrap;
-	width: 100%;
-	padding: 0 0.5em;
+	gap: 0.3em;
+	margin: 0 0.3em;
 	font-size: clamp(3.8rem, 5vw, 8rem);
 	text-align: center;
 	opacity: 0;
@@ -44,20 +43,16 @@
 	animation: heading-in 0.7s forwards;
 }
 
+.heading-box {
+	padding: 0.3em;
+	background-color: $black-color;
+	border-radius: 14px;
+}
+
 .heading-color {
 	background-image: linear-gradient(120deg, $main-color 0%, $secondary-color 100%);
 	background-clip: text;
 	color: transparent;
-}
-
-.heading-box {
-	padding: 0.3em;
-	width: 100%;
-	background-color: $black-color;
-	transform: rotate(-90deg);
-	border-radius: 14px;
-	opacity: 0;
-	animation: heading-box-in 0.7s 1s forwards;
 }
 
 .wrapper {
@@ -92,7 +87,7 @@
 
 	&-title {
 		position: relative;
-		padding: 2em 0.5em;
+		padding: 0.5em 1em;
 		width: 100%;
 		text-align: center;
 		font-size: clamp(3.2rem, 5vw, 4.8rem);
@@ -166,7 +161,7 @@
 	border-radius: 50%;
 	transform: translateX(-50%) translateY(100%);
 	opacity: 0;
-	animation: arrow-in 0.7s 2s forwards ease;
+	animation: arrow-in 0.7s 0.8s forwards ease;
 }
 
 .arrow {
@@ -220,9 +215,3 @@
 	}
 }
 
-@keyframes heading-box-in {
-	to {
-		transform: rotate(0);
-		opacity: 1;
-	}
-}
