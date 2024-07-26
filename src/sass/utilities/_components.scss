@@ -49,8 +49,20 @@
 	border-radius: 14px;
 }
 
+.img__container {
+	margin: 5em 0;
+	flex-wrap: wrap;
+	gap: 1em;
+
+	img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 .heading-color {
-	background-color: $black-color;
 	background-image: linear-gradient(120deg, $main-color 0%, $secondary-color 100%);
 	background-clip: text;
 	color: transparent;
@@ -67,7 +79,7 @@
 	position: relative;
 	width: 100%;
 	height: 50vh;
-	background-image: url('../img/small-hero.jpg');
+	background-image: url('../img/small-hero.webp');
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;

@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	home.style.setProperty = ('--height', window.innerHeight + 'px')
 
+	console.log(window.innerHeight);
+
 	 const showUpBox = () => {
 		if (window.scrollY > 300) {
 			upBox.classList.add('show__up-box')

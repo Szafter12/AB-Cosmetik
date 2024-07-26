@@ -2,7 +2,7 @@
 
 body {
 	background-color: $white-color;
-	background-image: url('../../dist/img/background.png');
+	background-image: url('../../dist/img/background.webp');
 	font-family: 'Montserrat', sans-serif;
 	font-size: clamp(1.4rem, 5vw, 1.6rem);
 	line-height: 1.6;
@@ -11,14 +11,7 @@ body {
 	animation: home 500s linear infinite;
 }
 
-@keyframes home {
-	from {
-		background-position: 0, 0;
-	}
-	to {
-		background-position: 0 var(--height);
-	}
-}
+
 
 .nav {
 	position: fixed;
@@ -325,21 +318,8 @@ body {
 	}
 
 	.hero-img--2 {
-		background-image: url('../img/small-hero2.jpg');
+		background-image: url('../img/small-hero2.webp');
 		background-attachment: local;
-	}
-
-	.img__container {
-		margin: 5em 0;
-		flex-wrap: wrap;
-		gap: 3em;
-
-		img {
-			width: 100%;
-			height: 300px;
-			object-fit: cover;
-			object-position: center;
-		}
 	}
 
 	.white__box,
@@ -419,6 +399,15 @@ body {
 			z-index: -1;
 			transition: height 0.3s;
 		}
+	}
+}
+
+@keyframes home {
+	from {
+		background-position: 0, 0;
+	}
+	to {
+		background-position: 0 var(--height);
 	}
 }
 

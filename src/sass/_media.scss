@@ -9,18 +9,19 @@
 		width: auto;
 	}
 	.hero-img {
-		background-image: url('../img/big-hero.jpg');
+		background-image: url('../img/big-hero.webp');
 	}
 	.aboutUs {
 		.hero-img--2 {
-			background-image: url('../img/big-hero2.jpg');
+			background-image: url('../img/big-hero2.webp');
 			background-attachment: fixed;
 		}
-		.img__container {
-			img {
-				width: 500px;
-				height: 500px;
-			}
+	}
+
+	.img__container {
+		img {
+			width: 500px;
+			height: 500px;
 		}
 	}
 
