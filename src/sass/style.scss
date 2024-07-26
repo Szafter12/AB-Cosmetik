@@ -234,13 +234,12 @@ body {
 	h3 {
 		position: relative;
 		margin: 2em 0;
-		padding: 3em 0;
+		padding: 1em 0;
 		font-weight: 400;
 		text-align: center;
 		font-size: clamp(2.5rem, 3vw, 3.2rem);
 		background-color: $main-color;
 		border-radius: 12px;
-		overflow: hidden;
 	}
 
 	&__container {
@@ -294,6 +293,7 @@ body {
 		font-size: clamp(2.2rem, 5vw, 3.2rem);
 		margin-bottom: 2em;
 		z-index: 2;
+		font-weight: 300;
 		line-height: 1.2;
 	}
 

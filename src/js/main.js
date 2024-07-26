@@ -5,8 +5,18 @@ window.addEventListener('DOMContentLoaded', () => {
 	const burgerBtn = document.querySelector('.nav__mobile-burger')
 	const wave = document.querySelector('.waves')
 	const home = document.querySelector('body')
+	const upBox = document.querySelector('.up-box')
+	const allSection = document.querySelectorAll('.section')
 
 	home.style.setProperty = ('--height', window.innerHeight + 'px')
+
+	 const showUpBox = () => {
+		if (window.scrollY > 300) {
+			upBox.classList.add('show__up-box')
+		} else {
+			upBox.classList.remove('show__up-box')
+		}
+	 }
 
 	const navScroll = () => {
 		if (window.scrollY > 0) {
@@ -46,5 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	setYear()
 	window.addEventListener('scroll', navScroll)
+	window.addEventListener('scroll', showUpBox)
+	upBox.addEventListener('click', () => {window.scrollTo({top: 0})})
 	burgerBtn.addEventListener('click', showMobile)
 })

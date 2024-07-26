@@ -25,6 +25,14 @@
 			}
 		}
 	}
+
+	.up-box {
+		position: fixed;
+		right: 40px;
+		bottom: 40px;
+		padding: 1.5em;
+	
+	}
 }
 @media (min-width: 768px) {
 	.section {
