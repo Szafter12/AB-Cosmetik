@@ -11,6 +11,10 @@ body {
 	animation: home 500s linear infinite;
 }
 
+img {
+	aspect-ratio: 4/3;
+}
+
 
 
 .nav {
@@ -303,7 +307,8 @@ body {
 	}
 
 	&__info {
-		font-size: clamp(1.6rem, 5vw, 2rem);
+		font-size: clamp(1.4rem, 3vw, 1.8rem);
+		font-weight: 300;
 		text-align: left;
 		p {
 			margin-bottom: 1em;

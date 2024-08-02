@@ -8,12 +8,6 @@
 	font-style: normal;
 }
 
-.bold {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 700;
-	font-style: normal;
-}
-
 // mixins
 
 @mixin underline($bgc) {
@@ -59,6 +53,7 @@
 		height: 300px;
 		object-fit: cover;
 		object-position: center;
+		border-radius: 12px;
 	}
 }
 
