@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+
 <head>
     <title>AB Cosmetik - Zakład Kosmetyczny w Limanowej</title>
     <meta name="description"
@@ -11,14 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@100..900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97392591bc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
+
 <body>
     <nav class="nav">
         <div class="nav__items">
             <div class="nav__item menu-item">
                 <div class="d-flex">
-                    <img src="./dist/img/arrow-down.svg" alt="">
+                    <i class="fa-solid fa-chevron-down"></i>
                     <a href="index.html#services" aria-label="Informacje o naszych usługach">Usługi</a>
                 </div>
                 <div class="dropdown d-flex">
@@ -96,8 +99,14 @@
             </svg>
         </a>
         <button aria-label="Przewiń do góry" class="up-box d-flex">
-            <img src="./dist/img/arrow-up.svg" alt="">
+            <i class="fa-solid fa-chevron-up"></i>
         </button>
+        <div class="socials d-flex">
+            <a href="https://www.facebook.com/abcosmetik" class="socials-ico" rel="noopener"
+                aria-label="Link do naszego facebooka"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/ab.cosmetik/" class="socials-ico" rel="noopener"
+                aria-label="Link do naszego instagrama"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </header>
     <section class="section services" id="services">
         <h2 class="section-title"><span>Usługi</span></h2>
@@ -192,7 +201,7 @@
                     <span class="services__price bold">120 zł</span>
                 </div>
                 <div class="services__box d-flex">
-                    <h4 class="services__title">Zabiegij pielęgnujące, ujędrniające, nawilżające, rewitalizujące,
+                    <h4 class="services__title">Zabiegi pielęgnujące, ujędrniające, nawilżające, rewitalizujące,
                         odżywcze, rozjaśniające</h4>
                     <span class="services__price bold">150 - 200 zł</span>
                 </div>
@@ -512,4 +521,5 @@
     </footer>
     <script src="./dist/js/main.min.js"></script>
 </body>
+
 </html>
