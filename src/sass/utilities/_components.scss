@@ -51,6 +51,8 @@
 	background-color: $black-color;
 	border-top-right-radius: 12px;
 	border-bottom-right-radius: 12px;
+	transform: translateX(-100%);
+	animation: social-in 0.7s 1.4s forwards;
 	&-ico {
 		color: $white-color;
 		font-size: clamp(2rem,3vw,3rem);
@@ -58,6 +60,12 @@
 		&:hover {
 			color: $secondary-color;
 		}
+	}
+}
+
+@keyframes social-in {
+	to {
+		transform: translateX(0);
 	}
 }
 
@@ -218,6 +226,10 @@
 	transition: transform 0.3s;
 	z-index: 10;
 	cursor: pointer;
+
+	.fa-chevron-up {
+		color: $black-color;
+	}
 }
 
 .show__up-box {
